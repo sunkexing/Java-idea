@@ -8,7 +8,8 @@ public class TestDemo2 {
 //    TestDemo2(int a){
 //        count=a;
 //    }
-     public TestDemo2(int count){
+      TestDemo2(int count){
+        //public TestDemo2(int count){
         this.count=count;
      }
 
