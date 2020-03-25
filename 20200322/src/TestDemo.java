@@ -18,7 +18,7 @@ public class TestDemo {
         myArrayList.setPos(2,10);
         myArrayList.display();
         System.out.println("=====================");
-        myArrayList.remove(40);
+        myArrayList.remove(10);
         myArrayList.display();
         System.out.println("=====================");
         System.out.println(myArrayList.size());
