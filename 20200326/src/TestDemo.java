@@ -5,7 +5,7 @@ class Person{
 
 public class TestDemo {
 
-    public static void main(String[] args) {
+    public static void main3(String[] args) {
         MyLinedList myLinedList=new MyLinedList();
         myLinedList.addLast(0);
         myLinedList.addLast(1);

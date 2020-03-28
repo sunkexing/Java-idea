@@ -205,7 +205,7 @@ public class MyLinedList {
 
     //返回倒数第k个节点
     public Node findKthToTail(int k){
-        if(k<0 || this.head==null){
+        if(k<=0 || k>size()){
             return null;
         }
         Node fast=this.head;
