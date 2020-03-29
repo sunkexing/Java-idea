@@ -2,7 +2,55 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 public class TestDemo {
 
+
+    public static Node mergeTwoLists(Node headA,Node headB){
+        Node newHead=new Node(-1);
+        Node tmp=newHead;
+        while (headA!=null && headB!=null){
+            if(headA.data<headB.data){
+                tmp.next=headA;
+                tmp=tmp.next;
+                headA=headA.next;
+            }else {
+                tmp.next=headB;
+                tmp=tmp.next;
+                headB=headB.next;
+            }
+        }
+        if(headA!=null){
+            tmp.next=headA;
+        }
+        if (headB!=null){
+            tmp.next=headB;
+        }
+        return newHead.next;
+    }
+
+
     public static void main(String[] args) {
+        MyLinedList myLinedList=new MyLinedList();
+        myLinedList.addLast(1);
+        myLinedList.addLast(2);
+        myLinedList.addLast(3);
+        myLinedList.addLast(4);
+        myLinedList.addLast(5);
+        myLinedList.disPlay();
+        MyLinedList myLinedList2=new MyLinedList();
+        myLinedList2.addLast(2);
+        myLinedList2.addLast(4);
+        myLinedList2.addLast(6);
+        myLinedList2.addLast(8);
+        myLinedList2.addLast(10);
+        myLinedList2.addLast(16);
+        myLinedList2.addLast(28);
+        myLinedList2.addLast(112);
+        myLinedList2.disPlay();
+
+        Node ret=mergeTwoLists(myLinedList.head,myLinedList2.head);
+        myLinedList.disPlay2(ret);
+    }
+
+    public static void main8(String[] args) {
         MyLinedList myLinedList=new MyLinedList();
         myLinedList.addLast(1);
         myLinedList.addLast(4);
